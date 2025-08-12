@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Deletion - HisoHiso</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section h2::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+        
+        .section h3 {
+            color: #555;
+            font-size: 1.3em;
+            margin: 20px 0 10px 0;
+        }
+        
+        .section p {
+            color: #666;
+            margin-bottom: 12px;
+            line-height: 1.7;
+        }
+        
+        .steps {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        
+        .steps ol {
+            padding-left: 20px;
+        }
+        
+        .steps li {
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .steps li strong {
+            color: #667eea;
+            font-weight: 600;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        .warning-box h4 {
+            color: #856404;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .warning-box h4::before {
+            content: '⚠️';
+            font-size: 1.2em;
+        }
+        
+        .warning-box ul {
+            padding-left: 25px;
+            color: #856404;
+        }
+        
+        .warning-box li {
+            margin-bottom: 8px;
+        }
+        
+        .info-box {
+            background: #d1ecf1;
+            border: 2px solid #17a2b8;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        .info-box h4 {
+            color: #0c5460;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .info-box h4::before {
+            content: 'ℹ️';
+            font-size: 1.2em;
+        }
+        
+        .info-box p {
+            color: #0c5460;
+            margin-bottom: 8px;
+        }
+        
+        .contact {
+            background: #f0f7ff;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .contact h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .contact a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+        
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 25px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .footer p {
+            margin-bottom: 5px;
+        }
+        
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .section h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Account Deletion</h1>
+            <p>How to Delete Your HisoHiso Account and Data</p>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2>Self-Service Account Deletion</h2>
+                <p>
+                    HisoHiso provides a simple and straightforward way for users to delete their account and associated data directly from within the app. You have full control over your account and can initiate the deletion process at any time without needing to contact support.
+                </p>
+            </div>
+            
+            <div class="section">
+                <h2>How to Delete Your Account</h2>
+                <div class="steps">
+                    <ol>
+                        <li><strong>Open the HisoHiso app</strong> on your mobile device</li>
+                        <li><strong>Navigate to your Profile</strong> by tapping the profile icon in the navigation bar</li>
+                        <li><strong>Access Account Settings</strong> by tapping the settings gear icon</li>
+                        <li><strong>Select "Account Information"</strong> from the settings menu</li>
+                        <li><strong>Scroll down and tap "Delete Account"</strong> (displayed in red)</li>
+                        <li><strong>Confirm your decision</strong> by following the on-screen prompts</li>
+                        <li><strong>Your account will be permanently deleted</strong> after confirmation</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="warning-box">
+                <h4>Important: Before You Delete Your Account</h4>
+                <ul>
+                    <li>Account deletion is <strong>permanent and irreversible</strong></li>
+                    <li>All your posts, comments, and interactions will be permanently removed</li>
+                    <li>Your username will become available for others to use</li>
+                    <li>You will lose access to all your saved content and favorites</li>
+                    <li>Any active subscriptions or premium features will be terminated</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>What Data Is Deleted?</h2>
+                <p>When you delete your account, the following data will be permanently removed:</p>
+                <ul style="padding-left: 25px; color: #666; line-height: 1.8;">
+                    <li>Your profile information (username, bio, profile picture)</li>
+                    <li>All posts and content you've created</li>
+                    <li>Comments and interactions on other users' posts</li>
+                    <li>Your followers and following lists</li>
+                    <li>Saved posts and bookmarks</li>
+                    <li>Location history and preferences</li>
+                    <li>App settings and customizations</li>
+                    <li>Any other personal data associated with your account</li>
+                </ul>
+            </div>
+            
+            <div class="section">
+                <h2>Data Retention Policy</h2>
+                <p>
+                    Upon account deletion, your personal data will be immediately marked for deletion and removed from our active databases. However, please note:
+                </p>
+                <ul style="padding-left: 25px; color: #666; line-height: 1.8;">
+                    <li>Some data may remain in backup systems for up to 30 days</li>
+                    <li>Anonymized or aggregated data that doesn't identify you may be retained</li>
+                    <li>Data may be retained if required by law or for legitimate business purposes</li>
+                </ul>
+            </div>
+            
+            <div class="info-box">
+                <h4>Alternative: Temporary Deactivation</h4>
+                <p>
+                    If you're not ready to permanently delete your account, consider temporarily deactivating it instead. This option allows you to take a break from HisoHiso while preserving your data for potential future use.
+                </p>
+            </div>
+            
+            <div class="section">
+                <h2>Need Assistance?</h2>
+                <p>
+                    While account deletion is designed to be a self-service process through the app, we understand that you may occasionally need help. If you encounter any issues with the deletion process or have questions about your data, please don't hesitate to contact us.
+                </p>
+                
+                <div class="contact">
+                    <h3>Contact Support</h3>
+                    <p>Email us at:</p>
+                    <a href="mailto:service@hisohiso.app">service@hisohiso.app</a>
+                    <p style="margin-top: 15px; font-size: 0.9em; color: #888;">
+                        Please include your username and registered email address in your message
+                    </p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Account Recovery</h2>
+                <p>
+                    Once your account is deleted, it cannot be recovered. If you wish to use HisoHiso again in the future, you will need to create a new account. Your previous username may not be available if it has been taken by another user.
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2025 HisoHiso. All rights reserved.</p>
+            <p>Last updated: January 2025</p>
+        </div>
+    </div>
+</body>
+</html>
